@@ -1,5 +1,7 @@
 package com.bobo.rpc;
 
+import com.bobo.registry.DefaultServiceRegistry;
+import com.bobo.registry.ServerRegistry;
 import com.bobo.server.RpcServer;
 
 /**
@@ -9,8 +11,10 @@ import com.bobo.server.RpcServer;
  */
 public class TestMainServer {
     public static void main(String[] args) {
-        RpcServer rpcServer = new RpcServer();
         HelloService helloService = new HelloServiceImpl();
-        rpcServer.register(helloService, 10001);
+        ServerRegistry serverRegistry = new DefaultServiceRegistry();
+        serverRegistry.registry(helloService);
+        RpcServer rpcServer = new RpcServer(serverRegistry);
+        rpcServer.start(10000);
     }
 }

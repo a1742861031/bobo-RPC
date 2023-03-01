@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b089f4b2-913e-4a33-82be-1fbc3a7cf822" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/bobo/rpc/HelloObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/bobo/rpc/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/bobo/rpc/entity/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/bobo/rpc/entity/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/bobo/rpc/enumeration/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/client/RpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/client/RpcClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/registry/DefaultServiceRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/registry/ServerRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/RpcServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/WorkerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-client/src/main/java/com/bobo/rpc/TestMainClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/com/bobo/rpc/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/com/bobo/rpc/TestMainServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/bobo/rpc/RpcException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/bobo/rpc/enumeration/RpcError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/registry/DefaultServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/registry/DefaultServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/RpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/bobo/server/RequestHandlerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/bobo/server/RpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/bobo/server/RpcServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/bobo/server/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-client/src/main/java/com/bobo/rpc/TestMainClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-client/src/main/java/com/bobo/rpc/TestMainClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-client/target/classes/com/bobo/rpc/TestMainClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/test-client/target/classes/com/bobo/rpc/TestMainClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/com/bobo/rpc/TestMainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/src/main/java/com/bobo/rpc/TestMainServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/target/classes/com/bobo/rpc/TestMainServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/target/classes/com/bobo/rpc/TestMainServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,11 +76,14 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bobo.server" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bobo.rpc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DefaultServiceRegistry">
+  <component name="RunManager" selected="Application.TestMainClient">
     <configuration name="DefaultServiceRegistry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bobo.registry.DefaultServiceRegistry" />
       <module name="rpc-core" />
@@ -134,9 +138,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DefaultServiceRegistry" />
         <item itemvalue="Application.TestMainClient" />
         <item itemvalue="Application.TestMainServer" />
+        <item itemvalue="Application.DefaultServiceRegistry" />
         <item itemvalue="Application.TestMain" />
       </list>
     </recent_temporary>
@@ -149,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677496904643</updated>
-      <workItem from="1677496904830" duration="17109000" />
+      <workItem from="1677496904830" duration="24006000" />
     </task>
     <servers />
   </component>
