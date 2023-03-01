@@ -1,7 +1,9 @@
 package com.bobo.rpc.entity;
 
 import com.bobo.rpc.enumeration.ResponseCode;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -11,6 +13,8 @@ import java.io.Serializable;
  * @Date 2023/2/27 19:37
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class RpcResponse<T> implements Serializable {
     /**
      * 响应状态码

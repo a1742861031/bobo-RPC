@@ -1,7 +1,8 @@
 package com.bobo.rpc.entity;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -11,8 +12,11 @@ import java.io.Serializable;
  * @Date 2023/2/27 19:35
  */
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RpcRequest implements Serializable {
+
+
     /**
      * 待调用接口名称
      */
